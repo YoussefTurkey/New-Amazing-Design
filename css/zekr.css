@@ -1,0 +1,257 @@
+/* Start Variables */
+:root {
+  --main-color: #1da243;
+  --second-color: #fff;
+  --section-padding: 100px;
+}
+/* End Variables */
+/* Start Globle Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Play", sans-serif;
+  background-color: white;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Globle Rules */
+
+/* Start Heading */
+nav {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+}
+nav .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .navbar .logo img {
+  width: 120px;
+}
+nav .navbar .links ul {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  line-height: 70px;
+}
+nav .navbar .links ul li {
+  padding: 0 30px;
+}
+nav .navbar .links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+nav .navbar .links ul li a:hover {
+  color: #df0024;
+}
+.btn .log {
+  border-radius: 7px;
+  background-color: #df0024;
+  padding: 8px 15px;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+  margin-right: 5px;
+  transition: 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+  height: 40px;
+}
+.btn .log:hover {
+  background-color: #fff;
+  color: #df0024;
+}
+.btn .sign {
+  border-radius: 7px;
+  background: none;
+  padding: 8px 12px;
+  font-size: 18px;
+  color: #fff;
+  border-color: #fff;
+  transition: 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+  height: 40px;
+}
+.btn .sign:hover {
+  border-color: #df0024;
+  color: #fff;
+}
+@media (max-width: 881px) {
+  nav .navbar .links {
+    display: none;
+  }
+  nav .navbar .btn {
+    position: absolute;
+    top: 90%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+  }
+  .btn .log {
+    padding: 8px 15px;
+    font-size: 22px;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    right: 100%;
+    top: 18%;
+  }
+  nav .navbar .btn .sign {
+    margin-top: 10px;
+  }
+  nav .navbar .logo img {
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* End Heading */
+
+/* Start Landing */
+.landing {
+  min-height: 100vh;
+  background-image: url(../images/1781.jpg);
+  background-size: cover;
+  position: relative;
+}
+.landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0/50%);
+}
+.landing .text {
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+.landing .text h2 {
+  font-weight: bold;
+  font-size: 55px;
+  color: #fff;
+}
+.landing .text .special {
+  position: absolute;
+  left: 60%;
+  color: #df0024;
+}
+.landing .text2 p {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 18px;
+  width: 550px;
+}
+.landing .more button {
+  border-radius: 7px;
+  background-color: #df0024;
+  padding: 8px 15px;
+  font-size: 22px;
+  border: none;
+  color: #fff;
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 2px rgba(0 0 0/50%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.landing .more button:hover {
+  background-color: #fff;
+  color: #df0024;
+  font-weight: bold;
+}
+.landing .social {
+  position: absolute;
+  top: 95%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+.landing .social i {
+  transition: 0.3s;
+}
+.landing .social i:hover {
+  color: #df0024;
+}
+.landing .signture {
+  position: absolute;
+  top: 95%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+@media (max-width: 797px) {
+  .landing {
+    width: 125%;
+    height: 125vh;
+  }
+  .landing .text h2 {
+    width: 90%;
+    font-size: 55px;
+    display: block;
+  }
+  .landing .text2 p {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .landing .signture {
+    position: absolute;
+    bottom: 85%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+}
+/* End Landing */
